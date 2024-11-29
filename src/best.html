@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Bests</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e2b;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 380px;
+            height: 90px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #282840;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+        }
+
+        .item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: var(--background); /* Background from CSS variable */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: 0;
+        }
+
+        .item-content {
+            display: flex;
+            flex-direction: row;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding: 0 10px;
+        }
+
+        .item-image {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .item-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f08080;
+            line-height: 1.2;
+        }
+
+        .item-score {
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+            margin: 5px 0;
+            color: #e0e0e0;
+        }
+
+        .item-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: #c0c0c0;
+        }
+
+        .item-meta span {
+            margin-right: 10px;
+        }
+
+        .item-meta .highlight {
+            color: #f0e68c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="section-title">Best</div>
+            <div class="items">
+                <!-- Item Example -->
+                <div class="item" style="--background: url('https://example.com/testify.jpg')">
+                    <div class="item-content">
+                        <div class="item-image">
+                            <img src="https://example.com/testify.jpg" alt="Testify">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-title">Testify</div>
+                            <div class="item-score">09'963'874</div>
+                            <div class="item-meta">
+                                <span>Potential 12.0 > <span class="highlight">13.8194</span> FR</span>
+                                <span>P: 2209 (+2146) F: 7 L: 5</span>
+                                <span>98d</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more items here -->
+            </div>
+        </div>
+        <!-- Additional sections can be added here -->
+    </div>
+</body>
+</html>

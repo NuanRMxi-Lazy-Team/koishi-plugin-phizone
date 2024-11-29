@@ -1,0 +1,27 @@
+{
+  "name": "@nuanr_mxi/koishi-plugin-phizone",
+  "description": "简易用于请求PhiZone API的koishi插件",
+  "version": "2.0.3",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "phizone",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.18.0"
+  },
+  "dependencies": {
+    "luxon": "^3.5.0",
+    "puppeteer": "^23.9.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
